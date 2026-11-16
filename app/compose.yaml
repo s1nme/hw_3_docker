@@ -1,0 +1,12 @@
+services:
+    web:
+        build: .
+        environment:
+            GREETING: "${GREETING}"
+        ports:
+            - "127.0.0.1:${HOST_PORT}:8000"
+        volumes:
+            - notes:/data
+
+volumes:
+    notes:
